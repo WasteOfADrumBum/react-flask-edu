@@ -1,0 +1,61 @@
+/* give me 5 color variables that are shades per each color of the rainbow */
+
+$red: #ff0000;
+$red-1: darken($red, 10%);
+$red-2: darken($red, 20%);
+$red-3: darken($red, 30%);
+$red-4: darken($red, 40%);
+$red-5: darken($red, 50%);
+
+$orange: #ff7f00;
+$orange-1: darken($orange, 10%);
+$orange-2: darken($orange, 20%);
+$orange-3: darken($orange, 30%);
+$orange-4: darken($orange, 40%);
+$orange-5: darken($orange, 50%);
+
+$yellow: #ffff00;
+$yellow-1: darken($yellow, 10%);
+$yellow-2: darken($yellow, 20%);
+$yellow-3: darken($yellow, 30%);
+$yellow-4: darken($yellow, 40%);
+$yellow-5: darken($yellow, 50%);
+
+$green: #00ff00;
+$green-1: darken($green, 10%);
+$green-2: darken($green, 20%);
+$green-3: darken($green, 30%);
+$green-4: darken($green, 40%);
+$green-5: darken($green, 50%);
+
+$blue: #0000ff;
+$blue-1: darken($blue, 10%);
+$blue-2: darken($blue, 20%);
+$blue-3: darken($blue, 30%);
+$blue-4: darken($blue, 40%);
+$blue-5: darken($blue, 50%);
+
+$indigo: #4b0082;
+$indigo-1: darken($indigo, 10%);
+$indigo-2: darken($indigo, 20%);
+$indigo-3: darken($indigo, 30%);
+$indigo-4: darken($indigo, 40%);
+$indigo-5: darken($indigo, 50%);
+
+$violet: #8a2be2;
+$violet-1: darken($violet, 10%);
+$violet-2: darken($violet, 20%);
+$violet-3: darken($violet, 30%);
+$violet-4: darken($violet, 40%);
+$violet-5: darken($violet, 50%);
+
+$white: #ffffff;
+$lightgray: #d3d3d3;
+$gray: #808080;
+$darkgray: #a9a9a9;
+$black: #000000;
+
+$react-blue: #61dafb;
+$bootstrap-blue: #007bff;
+$python-yellow: #ffd43b;
+$node-green: #3c873a;

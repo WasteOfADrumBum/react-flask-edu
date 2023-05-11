@@ -1,0 +1,16 @@
+@import '../../../assets/styles/colors.scss';
+
+#heroComponent {
+	.fa-react {
+		color: $react-blue;
+	}
+	.fa-bootstrap {
+		color: $bootstrap-blue;
+	}
+	.fa-python {
+		color: $python-yellow;
+	}
+	.fa-node {
+		color: $node-green;
+	}
+}
