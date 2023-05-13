@@ -1,16 +1,31 @@
 import React from 'react'
-import { Hero, Tab } from './common'
+import { Hero, Tab, SectionHeader } from './common'
 import '../assets/styles/App.scss'
 
 function App() {
+	const icons = [
+		'fa-brands fa-react',
+		'fa-brands fa-bootstrap',
+		'fas fa-american-sign-language-interpreting',
+		'fab fa-python',
+		'fab fa-node',
+	]
+	const title = 'React & Flask'
+	const subTitle = 'From Zero	to Full - Stack'
+	const content =
+		'This is a simple guide to building a full-stack web application using React and Flask. The guide is broken down into 5 parts: setting up the development environment, setting up the folder directory structure, building the backend, building the frontend, and deploying the application.'
+
 	return (
 		<div className='App'>
-			<Hero />
-			{/* Getting Started */}
+			<Hero icons={icons} title={title} subTitle={subTitle} content={content} />;
 			<section>
 				<div className='row'>
 					<div className='col-md-12'>
-						<h1 className='mb-3 text-center'>Getting Started</h1>
+						<SectionHeader
+							icon='fa-regular fa-circle-play'
+							title='Getting Started'
+							subtitle="Learn how to set up a full-stack web application using React and Flask by following these step-by-step instructions. Start by creating a root folder named react-flask and navigating to it in your terminal. Next, create a folder for the Flask server, and then create a file for the server. Navigate back to the root folder and use the npx create-react-app command to create a React app. Once that's done, create a virtual environment for the Flask server, activate it, and install Flask within it. These initial steps will set you on the path towards creating a fully functioning React and Flask app."
+						/>
 					</div>
 				</div>
 				<div className='row'>
@@ -104,16 +119,13 @@ function App() {
 				{/* Setting Up The Folder Directory Structure */}
 				<div className='row'>
 					<div className='col-md-12'>
-						<h1 className='my-3 text-center'>Setting Up The Folder Directory Structure</h1>
-					</div>
-				</div>
-				<div className='row'>
-					<div className='col-md-12'>
-						<p className='lead text-center'>
-							There is no one "best" folder directory structure for a React.js client application as it depends on the
+						<SectionHeader
+							icon='fa-solid fa-folder-tree'
+							title='Setting Up The Folder Directory Structure'
+							subtitle='There is no one "best" folder directory structure for a React.js client application as it depends on the
 							specific requirements of the application and the preferences of the development team. However, here is a
-							commonly used directory structure for a React.js client application:
-						</p>
+							commonly used directory structure for a React.js client application:'
+						/>
 					</div>
 				</div>
 				<div className='row'>
@@ -248,7 +260,11 @@ function App() {
 			<section>
 				<div className='row'>
 					<div className='col-md-12'>
-						<h1 className='my-3 text-center'>Building The Backend Using Flask</h1>
+						<SectionHeader
+							icon='fa-brands fa-python'
+							title='Building The Backend Using Flask'
+							subtitle='Learn how to build the backend of your web application using Flask. Follow along with code snippets and explanations that cover the basics, from importing the Flask class to defining routes and functions. Get started with the Flask server by creating an instance of the Flask class, defining an endpoint with the @app.route() decorator, and creating a function that returns data for that endpoint. Use debug mode to run and test your application.'
+						/>
 					</div>
 				</div>
 				<div className='row'>
@@ -496,7 +512,12 @@ function App() {
 			<section>
 				<div className='row'>
 					<div className='col-md-12'>
-						<h1 className='my-3 text-center'>Building The Frontend Using React</h1>
+						<SectionHeader
+							icon='fa-brands fa-react'
+							title='Building The Frontend Using React'
+							subtitle='Creating a Frontend with React and a Backend with Flask
+							In this example, a frontend is built using React, which retrieves data from the backend built using Flask. The React frontend imports various components and modules, including the BrowserRouter, Routes, and Route components from the react-router-dom module. The Members component is defined to retrieve member data from the Flask backend API, and the useState and useEffect hooks are used to manage the component state. The Flask backend is built using the Flask module, with the server.py script defining the route for the /members endpoint and the get_members() function that returns a list of members. Together, the React frontend and Flask backend create a functional web application that retrieves and displays member data.'
+						/>
 					</div>
 				</div>
 				<div className='row'>
@@ -722,7 +743,7 @@ function App() {
 										<span className='fw-lighter text-secondary me-3'>#17</span>
 										<Tab count={2} />
 										fetch(
-										<span className='code-string'>'/api/members'</span>)
+										<span className='code-string'>'/api/users'</span>)
 									</div>
 									<div>
 										<span className='fw-lighter text-secondary me-3'>#18</span>
@@ -927,7 +948,11 @@ function App() {
 			<section>
 				<div className='row'>
 					<div className='col-md-12'>
-						<h1 className='my-3 text-center'>Deploying The Application</h1>
+						<SectionHeader
+							icon='fa-solid fa-server'
+							title='Deploying The Application'
+							subtitle='Deploying the React-Flask application involves starting both the server and client applications. The server application is started by navigating to the server folder and running the "python server.py" command. The client application is started by navigating to the client folder and running the "npm start" command. Once both applications are running, the React-Flask application can be accessed through the web browser at the specified localhost address.'
+						/>
 					</div>
 				</div>
 				<div className='row'>

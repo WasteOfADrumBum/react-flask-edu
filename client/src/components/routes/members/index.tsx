@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { SectionHeader, DeleteUserButton, AddUserButton } from '../../common'
 import './_members.scss'
 
 const Members = () => {
-	const [data, setData] = useState([
+	const [users, setUsers] = useState([
 		{
 			id: 0,
+			full_name: '',
 			first_name: '',
 			middle_name: '',
 			last_name: '',
@@ -13,66 +15,97 @@ const Members = () => {
 			status: '',
 		},
 	])
+	const [refresh, setRefresh] = useState(false)
+
 	useEffect(() => {
-		fetch('/api/members')
-			.then((res) => res.json())
-			.then((data: any) => {
-				setData(data.members)
-				console.log(data.members)
-			})
-	}, [])
+		fetch('/api/users')
+			.then((response) => response.json())
+			.then((data) => setUsers(data.users))
+	}, [refresh])
+
+	const handleAction = (action: string) => (): void => {
+		setRefresh(true)
+		console.log(action)
+	}
+
+	useEffect(() => {
+		setRefresh(false)
+	}, [refresh])
 
 	return (
-		<div id='membersView'>
-			<table className='table table-striped'>
-				<thead className='bg-dark text-light'>
+		<div className='table-responsive'>
+			<SectionHeader
+				icon='fas fa-users'
+				title='Users'
+				subtitle='RESTful APIs are a way to structure communication between client and server through HTTP requests. The structure is based on a set of HTTP methods that can be used to perform specific actions on a server resource. In this case, React is the client-side framework and Flask is used as the server-side framework with Python as the backend programming language. Postgres is used as the database management system.'
+			/>
+			<div className='d-flex justify-content-end mb-3'>
+				<AddUserButton onUserAdded={handleAction('user added')} onRefresh={handleAction('refresh')} />;
+			</div>
+			<table className='table table-striped table-hover'>
+				<thead className='table-dark'>
 					<tr>
-						<th scope='col'>#</th>
-						<th scope='col'>Last</th>
-						<th scope='col'>First</th>
-						<th scope='col'>MI</th>
-						<th scope='col'>Email</th>
-						<th scope='col'>Status</th>
-						<th scope='col'>Actions</th>
+						<th scope='col' className='col-1'>
+							#
+						</th>
+						<th scope='col' className='col-2'>
+							Last
+						</th>
+						<th scope='col' className='col-2'>
+							First
+						</th>
+						<th scope='col' className='col-1'>
+							MI
+						</th>
+						<th scope='col' className='col-3'>
+							Email
+						</th>
+						<th scope='col' className='col-1'>
+							Status
+						</th>
+						<th scope='col' className='col-2' />
 					</tr>
 				</thead>
 				<tbody>
-					{typeof data === 'undefined' ? (
-						<p>Loading...</p>
-					) : (
-						data.map((member, index) => {
-							return (
-								<tr key={index}>
-									<th scope='row'>{member.id}</th>
-									<td className='text-uppercase'>{member.last_name}</td>
-									<td>{member.first_name}</td>
-									<td>{member.middle_name.length > 0 ? member.middle_name[0] : ''}</td>
-									<td>{member.email}</td>
-									<td>
-										{member.status === 'active' ? (
-											<span>
-												<i className='fas fa-check-circle text-success me-1' />
-												{member.status}
-											</span>
-										) : (
-											<span>
-												<i className='fas fa-times-circle text-danger me-1' />
-												{member.status}
-											</span>
-										)}
-									</td>
-									<td>
-										<Link to={`/members/${member.id}`} className='btn btn-primary mx-1'>
-											<i className='fas fa-user-edit' />
-										</Link>
-										<Link to={`/members/${member.id}`} className='btn btn-danger mx-1'>
-											<i className='fas fa-user-times' />
-										</Link>
-									</td>
-								</tr>
-							)
-						})
-					)}
+					{users.map((user) => (
+						<tr key={user.id}>
+							<th scope='row'>{user.id}</th>
+							<td className='text-uppercase'>
+								{user.last_name === null ? <span className='text-muted'>N/A</span> : user.last_name}
+							</td>
+							<td>{user.first_name === null ? <span className='text-muted'>N/A</span> : user.first_name}</td>
+							<td>
+								{user.middle_name === null ? <span className='text-muted'>N/A</span> : user.middle_name.charAt(0) + '.'}
+							</td>
+							<td>{user.email === null ? <span className='text-muted'>N/A</span> : user.email}</td>
+							<td>
+								{user.status === null ? (
+									<span className='text-muted'>N/A</span>
+								) : user.status === 'active' ? (
+									<span className='text-success'>
+										<i className='fas fa-check-circle' />
+									</span>
+								) : (
+									<span className='text-danger'>
+										<i className='fas fa-times-circle' />
+									</span>
+								)}
+							</td>
+							<td className='text-start text-lg-end'>
+								<Link to={`/members/${user.id}`} className='btn btn-primary mx-1'>
+									<i className='fas fa-eye'></i>
+								</Link>
+								<Link to={`/members/${user.id}/edit`} className='btn btn-warning mx-1'>
+									<i className='fas fa-edit'></i>
+								</Link>
+								<DeleteUserButton
+									userId={user.id}
+									onDelete={handleAction('user deleted')}
+									onRefresh={handleAction('refresh')}
+								/>
+							</td>
+						</tr>
+					))}
 				</tbody>
 			</table>
 		</div>

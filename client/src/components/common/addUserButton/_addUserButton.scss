@@ -1,0 +1,11 @@
+@import '../../../assets/styles/colors.scss';
+
+#addUserModal {
+	#full_name {
+		pointer-events: none;
+		user-select: none;
+		&::selection {
+			background-color: transparent;
+		}
+	}
+}

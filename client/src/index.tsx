@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './components/App'
 import reportWebVitals from './reportWebVitals'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { Members } from './components/routes'
+import { Members, Postgres } from './components/routes'
 import { Navbar, Footer } from './components/layout'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '@fortawesome/fontawesome-free/css/all.min.css'
@@ -20,6 +20,7 @@ root.render(
 				<Routes>
 					<Route path='/' element={<App />} />
 					<Route path='/members' element={<Members />} />
+					<Route path='/postgres' element={<Postgres />} />
 				</Routes>
 			</div>
 			<Footer />

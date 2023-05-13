@@ -1,0 +1,7 @@
+# Hide Node Modules
+/client/node_modules
+# Hide .env
+.env
+
+
+

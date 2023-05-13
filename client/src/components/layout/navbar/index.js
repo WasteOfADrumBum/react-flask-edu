@@ -27,12 +27,17 @@ const Navbar = () => {
 					<ul className='ms-auto navbar-nav'>
 						<li className='nav-item'>
 							<Link className='nav-link active' aria-current='page' to='/'>
-								Home
+								<i className='fa-solid fa-home mx-1' />
+							</Link>
+						</li>
+						<li className='nav-item'>
+							<Link className='nav-link' to='/postgres'>
+								<i className='fa-solid fa-database mx-1' />
 							</Link>
 						</li>
 						<li className='nav-item'>
 							<Link className='nav-link' to='/members'>
-								Members
+								<i className='fa-solid fa-users mx-1' />
 							</Link>
 						</li>
 					</ul>
