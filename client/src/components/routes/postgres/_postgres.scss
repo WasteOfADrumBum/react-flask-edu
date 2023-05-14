@@ -32,4 +32,10 @@
 	.postgres-blue {
 		color: $postgres-blue;
 	}
+
+	#pglogo {
+		max-width: 300px;
+		margin: 0 auto;
+		display: block;
+	}
 }

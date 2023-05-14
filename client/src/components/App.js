@@ -957,15 +957,6 @@ function App() {
 				</div>
 				<div className='row'>
 					<div className='col-md-6'>
-						<p className='lead text-center'>
-							To start the application, open two terminal windows. In the first terminal window, navigate to the{' '}
-							<i className='fa-solid fa-folder' /> <code>react-flask/server</code> folder and run the command{' '}
-							<code>python server.py</code>. In the second terminal window, navigate to the{' '}
-							<i className='fa-solid fa-folder' /> <code>react-flask/client</code> folder and run the command{' '}
-							<code>npm start</code>.
-						</p>
-					</div>
-					<div className='col-md-6'>
 						<div className='code-box text-start mb-4'>
 							<pre>
 								<code>
@@ -992,6 +983,15 @@ function App() {
 								</code>
 							</pre>
 						</div>
+					</div>
+					<div className='col-md-6'>
+						<p className='lead text-center'>
+							To start the application, open two terminal windows. In the first terminal window, navigate to the{' '}
+							<i className='fa-solid fa-folder' /> <code>react-flask/server</code> folder and run the command{' '}
+							<code>python server.py</code>. In the second terminal window, navigate to the{' '}
+							<i className='fa-solid fa-folder' /> <code>react-flask/client</code> folder and run the command{' '}
+							<code>npm start</code>.
+						</p>
 					</div>
 				</div>
 			</section>

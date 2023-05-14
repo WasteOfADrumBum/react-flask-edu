@@ -95,8 +95,7 @@ const AddUserButton: React.FC<Props> = ({ onUserAdded, onRefresh }) => {
 	return (
 		<>
 			<button type='button' className='btn btn-primary' onClick={() => setShowModal(true)}>
-				<i className='fas fa-plus me-1' />
-				Add User
+				<i className='fas fa-plus' />
 			</button>
 			{showModal && (
 				<div className='modal fade show' style={{ display: 'block' }} id='addUserModal'>

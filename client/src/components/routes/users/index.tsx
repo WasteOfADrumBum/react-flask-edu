@@ -43,7 +43,7 @@ const Users = () => {
 			<SectionHeader
 				icon='fas fa-users'
 				title='Users'
-				subtitle='RESTful APIs are a way to structure communication between client and server through HTTP requests. The structure is based on a set of HTTP methods that can be used to perform specific actions on a server resource. In this case, React is the client-side framework and Flask is used as the server-side framework with Python as the backend programming language. Postgres is used as the database management system.'
+				subtitle='This page is the Users page. It displays a table of all users in the database. You can add, edit, or delete users from this page through the RESTful API connected to the PostgreSQL database.'
 			/>
 			<div className='d-flex justify-content-end mb-3'>
 				<AddUserButton
