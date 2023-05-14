@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5af22e51.css",
+    "main.js": "/static/js/main.5691bcc9.js",
+    "static/js/284.0e4e6154.chunk.js": "/static/js/284.0e4e6154.chunk.js",
+    "static/js/496.0718fa68.chunk.js": "/static/js/496.0718fa68.chunk.js",
+    "static/media/fa-solid-900.ttf": "/static/media/fa-solid-900.4a2cd718d7031b732e76.ttf",
+    "static/media/profile_pic.png": "/static/media/profile_pic.61ef2c2ad8741e003b04.png",
+    "static/media/postgres_logo.png": "/static/media/postgres_logo.7b3ab917883cd6f36ef6.png",
+    "static/media/fa-brands-400.ttf": "/static/media/fa-brands-400.150de8eaa454d669c405.ttf",
+    "static/media/fa-solid-900.woff2": "/static/media/fa-solid-900.bb975c966c37455a1bc3.woff2",
+    "static/media/fa-brands-400.woff2": "/static/media/fa-brands-400.e033a13ee751afc1860c.woff2",
+    "static/media/fa-regular-400.ttf": "/static/media/fa-regular-400.d87474231f4192884802.ttf",
+    "static/media/fa-regular-400.woff2": "/static/media/fa-regular-400.3223dc79c1adee56370b.woff2",
+    "static/media/fa-v4compatibility.ttf": "/static/media/fa-v4compatibility.0e3a648be390bd8cb094.ttf",
+    "static/media/fa-v4compatibility.woff2": "/static/media/fa-v4compatibility.68577e40f3e70067b5da.woff2",
+    "index.html": "/index.html",
+    "main.5af22e51.css.map": "/static/css/main.5af22e51.css.map",
+    "main.5691bcc9.js.map": "/static/js/main.5691bcc9.js.map",
+    "496.0718fa68.chunk.js.map": "/static/js/496.0718fa68.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5af22e51.css",
+    "static/js/main.5691bcc9.js"
+  ]
+}
