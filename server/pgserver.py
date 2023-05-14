@@ -7,9 +7,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-response = requests.get('https://react-flask.herokuapp.com')
-print(response.text)
-
 # Initialize app
 app = Flask(__name__)
 
