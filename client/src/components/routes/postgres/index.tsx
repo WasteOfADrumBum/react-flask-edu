@@ -96,7 +96,7 @@ const Postgress = () => {
 									</div>
 									<div>
 										<span className='code-comment'>
-											export DATABASE_URL=postgresql://username:password@localhost:5432/db_ename
+											export DATABASE_URL=postgresql://username:password@localhost:5432/db_name
 										</span>
 										<span className='code-blinking'>|</span>
 									</div>
