@@ -1,1 +1,1 @@
-web: python pgserver.py
+web: python server/pgserver.py
