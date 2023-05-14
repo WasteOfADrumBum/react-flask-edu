@@ -1,6 +1,7 @@
 FROM python:latest
 COPY . /app
 WORKDIR /app
-RUN pip install Flask
+RUN pip install -r requirements.txt
 EXPOSE 5000
 CMD ["python", "server/pgserver.py"]
+
