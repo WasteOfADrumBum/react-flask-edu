@@ -123,7 +123,6 @@ def index():
 
 if __name__ == '__main__':
     # get the port number from the PORT environment variable
-    # port = int(os.environ.get('PORT', 5000))
-    port = 5000
+    port = int(os.environ.get('PORT', 5000))
     # run the app on the assigned port
     app.run(host='0.0.0.0', port=port)
