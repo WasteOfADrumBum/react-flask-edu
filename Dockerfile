@@ -16,5 +16,5 @@ COPY . .
 EXPOSE 5000
 
 # Command to start the server
-# CMD ["python", "server/pgserver.py"]
+#CMD ["python", "server/pgserver.py"]
 CMD ["gunicorn", "-b", "0.0.0.0:5000", "pgserver:app"]
