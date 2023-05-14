@@ -1,1 +1,1 @@
-web: gunicorn pgserver:app
+web: python server/pgserver.py
