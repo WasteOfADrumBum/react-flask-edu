@@ -102,9 +102,6 @@ const Users = () => {
 								)}
 							</td>
 							<td className='text-start text-lg-end'>
-								<Link to={`/users/${user.id}`} className='btn btn-primary mx-1'>
-									<i className='fas fa-eye'></i>
-								</Link>
 								<EditUserButton
 									user={user}
 									onUserUpdated={handleAction('user edited')}
