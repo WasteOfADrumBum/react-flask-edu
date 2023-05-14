@@ -1,10 +1,14 @@
 import os
+import requests
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from psycopg2 import connect
 from dotenv import load_dotenv
 
 load_dotenv()
+
+response = requests.get('https://react-flask.herokuapp.com')
+print(response.text)
 
 # Initialize app
 app = Flask(__name__)
