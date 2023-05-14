@@ -3,4 +3,4 @@ COPY . /app
 WORKDIR /app
 RUN pip install Flask
 EXPOSE 5000
-CMD ["python", "pgserver.py"]
+CMD ["python", "server/pgserver.py"]
