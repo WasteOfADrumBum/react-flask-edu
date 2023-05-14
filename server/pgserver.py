@@ -7,7 +7,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-port = int(os.environ.get('PORT', 33507))
 response = requests.get('https://react-flask.herokuapp.com')
 print(response.text)
 
