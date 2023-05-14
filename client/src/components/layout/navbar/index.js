@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Navbar = () => {
 	return (
-		<nav className='navbar navbar-expand-lg navbar-light bg-light fixed-top border-bottom border-3'>
+		<nav className='navbar navbar-expand-lg fixed-top border-bottom border-3'>
 			<div className='container'>
 				<Link className='navbar-brand' to='/'>
 					<i className='fa-brands fa-bootstrap fa-2xl' />
@@ -36,7 +36,7 @@ const Navbar = () => {
 							</Link>
 						</li>
 						<li className='nav-item'>
-							<Link className='nav-link' to='/members'>
+							<Link className='nav-link' to='/users'>
 								<i className='fa-solid fa-users mx-1' />
 							</Link>
 						</li>

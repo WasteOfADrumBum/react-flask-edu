@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import './_addUserButton.scss'
+import './_editUserButton.scss'
 
-// Define the shape of the user object that will be submitted to the server
 type User = {
 	full_name: string
 	first_name: string
@@ -11,31 +10,18 @@ type User = {
 	status: string
 }
 
-// Define the props that the component expects
 type Props = {
-	onUserAdded: () => void // Function to be called when a new user is successfully added
-	onRefresh: () => void // Function to be called when the list of users needs to be refreshed
-	handleStatusChange: React.ChangeEventHandler<HTMLSelectElement>
+	user: User
+	onUserUpdated: () => void
+	onRefresh: () => void
 }
 
-// Define the component
-const AddUserButton: React.FC<Props> = ({ onUserAdded, onRefresh }) => {
-	// Set up state variables to track whether the modal is visible and the form data
+const EditUserButton: React.FC<Props> = ({ user, onUserUpdated, onRefresh }) => {
 	const [showModal, setShowModal] = useState(false)
-	const [formData, setFormData] = useState<User>({
-		full_name: '',
-		first_name: '',
-		middle_name: null,
-		last_name: '',
-		email: '',
-		status: '',
-	})
+	const [formData, setFormData] = useState<User>(user)
 
-	// Handle changes to the form inputs
 	const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-		// Extract the name and value of the changed input field
 		const { name, value } = event.target
-		// Update the form data, including the full name field which is dynamically generated from the first name, middle name, and last name fields
 		setFormData((prevData) => ({
 			...prevData,
 			[name]: value,
@@ -45,7 +31,6 @@ const AddUserButton: React.FC<Props> = ({ onUserAdded, onRefresh }) => {
 		}))
 	}
 
-	// Handle changes to the status select
 	const handleStatusChange: React.ChangeEventHandler<HTMLSelectElement> = (event) => {
 		setFormData((prevData) => ({
 			...prevData,
@@ -53,57 +38,42 @@ const AddUserButton: React.FC<Props> = ({ onUserAdded, onRefresh }) => {
 		}))
 	}
 
-	// Handle submission of the form
 	const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault()
-
-		// Verify that the email address is valid
 		const emailRegex = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/
 		if (!emailRegex.test(formData.email)) {
 			alert('Please enter a valid email address')
 			return
 		}
 
-		// Submit the form data to the server
-		fetch('/api/users', {
-			method: 'POST',
+		fetch(`/api/users/${user.id}`, {
+			method: 'PUT',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify(formData),
 		})
 			.then((response) => {
-				// If the response is OK, clear the form data and call the onUserAdded and onRefresh functions to update the UI
 				if (response.ok) {
 					setShowModal(false)
-					setFormData({
-						full_name: '',
-						first_name: '',
-						middle_name: null,
-						last_name: '',
-						email: '',
-						status: '',
-					})
-					onUserAdded()
+					onUserUpdated()
 					onRefresh()
 				}
 			})
 			.catch((error) => {
-				// Log any errors that occur during submission
 				console.error(error)
 			})
 	}
 
 	return (
 		<>
-			<button type='button' className='btn btn-primary' onClick={() => setShowModal(true)}>
-				<i className='fas fa-plus me-1' />
-				Add User
+			<button type='button' className='btn btn-warning mx-1' onClick={() => setShowModal(true)}>
+				<i className='fas fa-edit me-1' />
 			</button>
 			{showModal && (
-				<div className='modal fade show' style={{ display: 'block' }} id='addUserModal'>
+				<div className='modal fade show' style={{ display: 'block' }} id='editUserModal'>
 					<div className='modal-dialog modal-dialog-centered'>
 						<div className='modal-content'>
 							<div className='modal-header'>
-								<h5 className='modal-title'>Add User</h5>
+								<h5 className='modal-title'>Edit User</h5>
 								<button type='button' className='btn-close' onClick={() => setShowModal(false)}></button>
 							</div>
 							<form onSubmit={handleSubmit}>
@@ -124,7 +94,7 @@ const AddUserButton: React.FC<Props> = ({ onUserAdded, onRefresh }) => {
 									<div className='mb-3'>
 										<label htmlFor='first_name' className='form-label'>
 											First Name
-											<i className='fas fa-asterisk ms-1 text-danger fa-2xs' />
+											<i className='fas fa-asterisk ms-1 text-danger fa-2xs'></i>
 										</label>
 										<input
 											type='text'
@@ -205,8 +175,8 @@ const AddUserButton: React.FC<Props> = ({ onUserAdded, onRefresh }) => {
 										Cancel
 									</button>
 									<button type='submit' className='btn btn-primary'>
-										<i className='fas fa-plus me-1' />
-										Add User
+										<i className='fas fa-edit me-1' />
+										Edit User
 									</button>
 								</div>
 							</form>
@@ -218,4 +188,4 @@ const AddUserButton: React.FC<Props> = ({ onUserAdded, onRefresh }) => {
 	)
 }
 
-export default AddUserButton
+export default EditUserButton

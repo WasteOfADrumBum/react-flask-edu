@@ -1,0 +1,213 @@
+@import './colors.scss';
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+
+/* Bootstrap */
+
+$primary: $color-adobe-1;
+$secondary: $color-adobe-5;
+$success: $color-adobe-2;
+$warning: $color-adobe-3;
+$danger: $color-adobe-4;
+
+/* Bootstrap Buttons */
+
+.btn-primary {
+	color: $white;
+	background-color: $primary;
+	border-color: $primary;
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $white;
+		background-color: darken($primary, 5%);
+		border-color: darken($primary, 10%);
+	}
+}
+
+.btn-secondary {
+	color: $white;
+	background-color: $secondary;
+	border-color: $secondary;
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $white;
+		background-color: darken($secondary, 5%);
+		border-color: darken($secondary, 10%);
+	}
+}
+
+.btn-success {
+	color: $white;
+	background-color: $success;
+	border-color: $success;
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $white;
+		background-color: darken($success, 5%);
+		border-color: darken($success, 10%);
+	}
+}
+
+.btn-warning {
+	color: $white;
+	background-color: $warning;
+	border-color: $warning;
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $white;
+		background-color: darken($warning, 5%);
+		border-color: darken($warning, 10%);
+	}
+}
+
+.btn-danger {
+	color: $white;
+	background-color: $danger;
+	border-color: $danger;
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $white;
+		background-color: darken($danger, 5%);
+		border-color: darken($danger, 10%);
+	}
+}
+
+/* Bootstrap Modal */
+// Style the modal backdrop
+.modal-backdrop {
+	background-color: rgba($color-adobe-5, 0.5);
+}
+
+// Style the modal content
+.modal-content {
+	background-color: $white;
+	color: $color-adobe-5;
+	border: none;
+	border-radius: 0.5rem;
+
+	// Style the modal header
+	.modal-header {
+		border: 0.1rem solid rgba($color-adobe-1, 0.1);
+		border-bottom: none;
+		color: $color-adobe-1;
+		background-color: $nav-footer-bg;
+
+		// Style the close button
+		.close {
+			color: $color-adobe-5;
+
+			&:hover {
+				color: $color-adobe-4;
+			}
+		}
+	}
+
+	// Style the modal body
+	.modal-body {
+		color: $color-adobe-5;
+		border-left: 0.1rem solid rgba($color-adobe-1, 0.1);
+		border-right: 0.1rem solid rgba($color-adobe-1, 0.1);
+	}
+
+	// Style the modal footer
+	.modal-footer {
+		border: 0.1rem solid rgba($color-adobe-1, 0.1);
+		border-top: none;
+		background-color: $nav-footer-bg;
+		color: $color-adobe-5;
+	}
+}
+
+/* Navbar */
+.navbar {
+	background-color: $nav-footer-bg;
+
+	.navbar-brand {
+		color: $color-adobe-1;
+
+		&:hover {
+			color: $color-adobe-4;
+		}
+	}
+
+	.navbar-nav {
+		.nav-link {
+			color: $color-adobe-1;
+
+			&:hover {
+				color: $color-adobe-4;
+			}
+		}
+
+		.active {
+			background-color: transparent;
+		}
+	}
+
+	.navbar-toggler {
+		border-color: $color-adobe-5;
+
+		&:hover {
+			border-color: $color-adobe-4;
+		}
+	}
+}
+
+/* Footer */
+
+footer {
+	background-color: $nav-footer-bg;
+	color: $color-adobe-1;
+	font-size: 14px;
+
+	a {
+		color: $color-adobe-1;
+
+		&:hover {
+			color: $color-adobe-4;
+		}
+	}
+}
+
+/* Code Box */
+code {
+	color: $color-adobe-4;
+}
+.code-box {
+	background-color: $color-adobe-5;
+	color: $white;
+	padding: 1rem;
+	border-radius: 5px;
+	margin-bottom: 1rem;
+}
+.code-comment {
+	color: $color-adobe-3;
+}
+.code-keyword {
+	color: $color-adobe-2;
+}
+.code-blinking {
+	animation: blink-animation 1s steps(5, start) infinite;
+	-webkit-animation: blink-animation 1s steps(5, start) infinite;
+	color: $color-adobe-1;
+}
+@keyframes blink-animation {
+	to {
+		visibility: hidden;
+	}
+}
+@-webkit-keyframes blink-animation {
+	to {
+		visibility: hidden;
+	}
+}

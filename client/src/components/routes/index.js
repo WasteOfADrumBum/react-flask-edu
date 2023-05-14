@@ -1,2 +1,2 @@
-export { default as Members } from './members'
+export { default as Users } from './users'
 export { default as Postgres } from './postgres'

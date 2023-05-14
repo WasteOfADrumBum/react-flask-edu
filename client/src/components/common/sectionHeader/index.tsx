@@ -1,4 +1,5 @@
 import React from 'react'
+import './_sectionHeader.scss'
 
 interface SectionHeaderProps {
 	icon?: string
@@ -16,7 +17,7 @@ const SectionHeader = (props: SectionHeaderProps) => {
 	}
 
 	return (
-		<div className='container my-4'>
+		<div className='container my-4' id='sectionHeader'>
 			<div className='row'>
 				<div className='col'>
 					<h2 className={`text-uppercase ${borderBottom(title, subtitle)}`}>

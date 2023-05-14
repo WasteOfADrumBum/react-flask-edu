@@ -1,58 +1,56 @@
-/* give me 5 color variables that are shades per each color of the rainbow */
-
 $red: #ff0000;
-$red-1: darken($red, 10%);
-$red-2: darken($red, 20%);
-$red-3: darken($red, 30%);
-$red-4: darken($red, 40%);
-$red-5: darken($red, 50%);
+$red-darker: darken($red, 10%);
+$red-dark: darken($red, 20%);
+$red-mid: darken($red, 30%);
+$red-light: darken($red, 40%);
+$red-lighter: darken($red, 50%);
 
 $orange: #ff7f00;
-$orange-1: darken($orange, 10%);
-$orange-2: darken($orange, 20%);
-$orange-3: darken($orange, 30%);
-$orange-4: darken($orange, 40%);
-$orange-5: darken($orange, 50%);
+$orange-darker: darken($orange, 10%);
+$orange-dark: darken($orange, 20%);
+$orange-mid: darken($orange, 30%);
+$orange-light: darken($orange, 40%);
+$orange-lighter: darken($orange, 50%);
 
 $yellow: #ffff00;
-$yellow-1: darken($yellow, 10%);
-$yellow-2: darken($yellow, 20%);
-$yellow-3: darken($yellow, 30%);
-$yellow-4: darken($yellow, 40%);
-$yellow-5: darken($yellow, 50%);
+$yellow-darker: darken($yellow, 10%);
+$yellow-dark: darken($yellow, 20%);
+$yellow-mid: darken($yellow, 30%);
+$yellow-light: darken($yellow, 40%);
+$yellow-lighter: darken($yellow, 50%);
 
 $green: #00ff00;
-$green-1: darken($green, 10%);
-$green-2: darken($green, 20%);
-$green-3: darken($green, 30%);
-$green-4: darken($green, 40%);
-$green-5: darken($green, 50%);
+$green-darker: darken($green, 10%);
+$green-dark: darken($green, 20%);
+$green-mid: darken($green, 30%);
+$green-light: darken($green, 40%);
+$green-lighter: darken($green, 50%);
 
 $blue: #0000ff;
-$blue-1: darken($blue, 10%);
-$blue-2: darken($blue, 20%);
-$blue-3: darken($blue, 30%);
-$blue-4: darken($blue, 40%);
-$blue-5: darken($blue, 50%);
+$blue-darker: darken($blue, 10%);
+$blue-dark: darken($blue, 20%);
+$blue-mid: darken($blue, 30%);
+$blue-light: darken($blue, 40%);
+$blue-lighter: darken($blue, 50%);
 
 $indigo: #4b0082;
-$indigo-1: darken($indigo, 10%);
-$indigo-2: darken($indigo, 20%);
-$indigo-3: darken($indigo, 30%);
-$indigo-4: darken($indigo, 40%);
-$indigo-5: darken($indigo, 50%);
+$indigo-darker: darken($indigo, 10%);
+$indigo-dark: darken($indigo, 20%);
+$indigo-mid: darken($indigo, 30%);
+$indigo-light: darken($indigo, 40%);
+$indigo-lighter: darken($indigo, 50%);
 
 $violet: #8a2be2;
-$violet-1: darken($violet, 10%);
-$violet-2: darken($violet, 20%);
-$violet-3: darken($violet, 30%);
-$violet-4: darken($violet, 40%);
-$violet-5: darken($violet, 50%);
+$violet-darker: darken($violet, 10%);
+$violet-dark: darken($violet, 20%);
+$violet-mid: darken($violet, 30%);
+$violet-light: darken($violet, 40%);
+$violet-lighter: darken($violet, 50%);
 
 $white: #ffffff;
 $lightgray: #d3d3d3;
 $gray: #808080;
-$darkgray: #a9a9a9;
+$darkgray: #707070;
 $black: #000000;
 
 $react-blue: #61dafb;
@@ -61,3 +59,516 @@ $python-yellow: #ffd43b;
 $node-green: #3c873a;
 $django-green: #0c4b33;
 $postgres-blue: #336791;
+
+$color-adobe-1: #05a688;
+$color-adobe-2: #49bf45;
+$color-adobe-3: #f2c335;
+$color-adobe-4: #f2541b;
+$color-adobe-5: #0d0d0d;
+
+$nav-footer-bg: #ddecda;
+
+/* Text Colors */
+
+.red {
+	color: $red;
+}
+.red-darker {
+	color: $red-darker;
+}
+.red-dark {
+	color: $red-dark;
+}
+.red-mid {
+	color: $red-mid;
+}
+.red-light {
+	color: $red-light;
+}
+.red-lighter {
+	color: $red-lighter;
+}
+
+.orange {
+	color: $orange;
+}
+.orange-darker {
+	color: $orange-darker;
+}
+.orange-dark {
+	color: $orange-dark;
+}
+.orange-mid {
+	color: $orange-mid;
+}
+.orange-light {
+	color: $orange-light;
+}
+.orange-lighter {
+	color: $orange-lighter;
+}
+
+.yellow {
+	color: $yellow;
+}
+.yellow-darker {
+	color: $yellow-darker;
+}
+.yellow-dark {
+	color: $yellow-dark;
+}
+.yellow-mid {
+	color: $yellow-mid;
+}
+.yellow-light {
+	color: $yellow-light;
+}
+.yellow-lighter {
+	color: $yellow-lighter;
+}
+
+.green {
+	color: $green;
+}
+.green-darker {
+	color: $green-darker;
+}
+.green-dark {
+	color: $green-dark;
+}
+.green-mid {
+	color: $green-mid;
+}
+.green-light {
+	color: $green-light;
+}
+.green-lighter {
+	color: $green-lighter;
+}
+
+.blue {
+	color: $blue;
+}
+.blue-darker {
+	color: $blue-darker;
+}
+.blue-dark {
+	color: $blue-dark;
+}
+.blue-mid {
+	color: $blue-mid;
+}
+.blue-light {
+	color: $blue-light;
+}
+.blue-lighter {
+	color: $blue-lighter;
+}
+
+.indigo {
+	color: $indigo;
+}
+.indigo-darker {
+	color: $indigo-darker;
+}
+.indigo-dark {
+	color: $indigo-dark;
+}
+.indigo-mid {
+	color: $indigo-mid;
+}
+.indigo-light {
+	color: $indigo-light;
+}
+.indigo-lighter {
+	color: $indigo-lighter;
+}
+
+.violet {
+	color: $violet;
+}
+.violet-darker {
+	color: $violet-darker;
+}
+.violet-dark {
+	color: $violet-dark;
+}
+.violet-mid {
+	color: $violet-mid;
+}
+.violet-light {
+	color: $violet-light;
+}
+.violet-lighter {
+	color: $violet-lighter;
+}
+.white {
+	color: $white;
+}
+.lightgray {
+	color: $lightgray;
+}
+.gray {
+	color: $gray;
+}
+.darkgray {
+	color: $darkgray;
+}
+.black {
+	color: $black;
+}
+
+.react-blue {
+	color: $react-blue;
+}
+.bootstrap-blue {
+	color: $bootstrap-blue;
+}
+.python-yellow {
+	color: $python-yellow;
+}
+.node-green {
+	color: $node-green;
+}
+.django-green {
+	color: $django-green;
+}
+.postgres-blue {
+	color: $postgres-blue;
+}
+
+.color-adobe-1 {
+	color: $color-adobe-1;
+}
+.color-adobe-2 {
+	color: $color-adobe-2;
+}
+.color-adobe-3 {
+	color: $color-adobe-3;
+}
+.color-adobe-4 {
+	color: $color-adobe-4;
+}
+.color-adobe-5 {
+	color: $color-adobe-5;
+}
+
+/* Background Colors */
+
+.red-bg {
+	background-color: $red;
+}
+.red-darker-bg {
+	background-color: $red-darker;
+}
+.red-dark-bg {
+	background-color: $red-dark;
+}
+.red-mid-bg {
+	background-color: $red-mid;
+}
+.red-light-bg {
+	background-color: $red-light;
+}
+.red-lighter-bg {
+	background-color: $red-lighter;
+}
+
+.orange-bg {
+	background-color: $orange;
+}
+.orange-darker-bg {
+	background-color: $orange-darker;
+}
+.orange-dark-bg {
+	background-color: $orange-dark;
+}
+.orange-mid-bg {
+	background-color: $orange-mid;
+}
+.orange-light-bg {
+	background-color: $orange-light;
+}
+.orange-lighter-bg {
+	background-color: $orange-lighter;
+}
+
+.yellow-bg {
+	background-color: $yellow;
+}
+.yellow-darker-bg {
+	background-color: $yellow-darker;
+}
+.yellow-dark-bg {
+	background-color: $yellow-dark;
+}
+.yellow-mid-bg {
+	background-color: $yellow-mid;
+}
+.yellow-light-bg {
+	background-color: $yellow-light;
+}
+.yellow-lighter-bg {
+	background-color: $yellow-lighter;
+}
+
+.green-bg {
+	background-color: $green;
+}
+.green-darker-bg {
+	background-color: $green-darker;
+}
+.green-dark-bg {
+	background-color: $green-dark;
+}
+.green-mid-bg {
+	background-color: $green-mid;
+}
+.green-light-bg {
+	background-color: $green-light;
+}
+.green-lighter-bg {
+	background-color: $green-lighter;
+}
+
+.blue-bg {
+	background-color: $blue;
+}
+.blue-darker-bg {
+	background-color: $blue-darker;
+}
+.blue-dark-bg {
+	background-color: $blue-dark;
+}
+.blue-mid-bg {
+	background-color: $blue-mid;
+}
+.blue-light-bg {
+	background-color: $blue-light;
+}
+.blue-lighter-bg {
+	background-color: $blue-lighter;
+}
+
+.indigo-bg {
+	background-color: $indigo;
+}
+.indigo-darker-bg {
+	background-color: $indigo-darker;
+}
+.indigo-dark-bg {
+	background-color: $indigo-dark;
+}
+.indigo-mid-bg {
+	background-color: $indigo-mid;
+}
+.indigo-light-bg {
+	background-color: $indigo-light;
+}
+.indigo-lighter-bg {
+	background-color: $indigo-lighter;
+}
+
+.violet-bg {
+	background-color: $violet;
+}
+.violet-darker-bg {
+	background-color: $violet-darker;
+}
+.violet-dark-bg {
+	background-color: $violet-dark;
+}
+.violet-mid-bg {
+	background-color: $violet-mid;
+}
+.violet-light-bg {
+	background-color: $violet-light;
+}
+.violet-lighter-bg {
+	background-color: $violet-lighter;
+}
+
+/* Border Colors */
+
+.border-red {
+	border-color: $red !important;
+}
+.border-red-darker {
+	border-color: $red-darker !important;
+}
+.border-red-dark {
+	border-color: $red-dark !important;
+}
+.border-red-mid {
+	border-color: $red-mid !important;
+}
+.border-red-light {
+	border-color: $red-light !important;
+}
+.border-red-lighter {
+	border-color: $red-lighter !important;
+}
+
+.border-orange {
+	border-color: $orange !important;
+}
+.border-orange-darker {
+	border-color: $orange-darker !important;
+}
+.border-orange-dark {
+	border-color: $orange-dark !important;
+}
+.border-orange-mid {
+	border-color: $orange-mid !important;
+}
+.border-orange-light {
+	border-color: $orange-light !important;
+}
+.border-orange-lighter {
+	border-color: $orange-lighter !important;
+}
+
+.border-yellow {
+	border-color: $yellow !important;
+}
+.border-yellow-darker {
+	border-color: $yellow-darker !important;
+}
+.border-yellow-dark {
+	border-color: $yellow-dark !important;
+}
+.border-yellow-mid {
+	border-color: $yellow-mid !important;
+}
+.border-yellow-light {
+	border-color: $yellow-light !important;
+}
+.border-yellow-lighter {
+	border-color: $yellow-lighter !important;
+}
+
+.border-green {
+	border-color: $green !important;
+}
+.border-green-darker {
+	border-color: $green-darker !important;
+}
+.border-green-dark {
+	border-color: $green-dark !important;
+}
+.border-green-mid {
+	border-color: $green-mid !important;
+}
+.border-green-light {
+	border-color: $green-light !important;
+}
+.border-green-lighter {
+	border-color: $green-lighter !important;
+}
+
+.border-blue {
+	border-color: $blue !important;
+}
+.border-blue-darker {
+	border-color: $blue-darker !important;
+}
+.border-blue-dark {
+	border-color: $blue-dark !important;
+}
+.border-blue-mid {
+	border-color: $blue-mid !important;
+}
+.border-blue-light {
+	border-color: $blue-light !important;
+}
+.border-blue-lighter {
+	border-color: $blue-lighter !important;
+}
+
+.border-indigo {
+	border-color: $indigo !important;
+}
+.border-indigo-darker {
+	border-color: $indigo-darker !important;
+}
+.border-indigo-dark {
+	border-color: $indigo-dark !important;
+}
+.border-indigo-mid {
+	border-color: $indigo-mid !important;
+}
+.border-indigo-light {
+	border-color: $indigo-light !important;
+}
+.border-indigo-lighter {
+	border-color: $indigo-lighter !important;
+}
+
+.border-violet {
+	border-color: $violet !important;
+}
+.border-violet-darker {
+	border-color: $violet-darker !important;
+}
+.border-violet-dark {
+	border-color: $violet-dark !important;
+}
+.border-violet-mid {
+	border-color: $violet-mid !important;
+}
+.border-violet-light {
+	border-color: $violet-light !important;
+}
+.border-violet-lighter {
+	border-color: $violet-lighter !important;
+}
+.border-white {
+	border-color: $white !important;
+}
+.border-lightgray {
+	border-color: $lightgray !important;
+}
+.border-gray {
+	border-color: $gray !important;
+}
+.border-darkgray {
+	border-color: $darkgray !important;
+}
+.border-black {
+	border-color: $black !important;
+}
+
+.border-react-blue {
+	border-color: $react-blue !important;
+}
+.border-bootstrap-blue {
+	border-color: $bootstrap-blue !important;
+}
+.border-python-yellow {
+	border-color: $python-yellow !important;
+}
+.border-node-green {
+	border-color: $node-green !important;
+}
+.border-django-green {
+	border-color: $django-green !important;
+}
+.border-postgres-blue {
+	border-color: $postgres-blue !important;
+}
+
+.border-color-adobe-1 {
+	border-color: $color-adobe-1 !important;
+}
+.border-color-adobe-2 {
+	border-color: $color-adobe-2 !important;
+}
+.border-color-adobe-3 {
+	border-color: $color-adobe-3 !important;
+}
+.border-color-adobe-4 {
+	border-color: $color-adobe-4 !important;
+}
+.border-color-adobe-5 {
+	border-color: $color-adobe-5 !important;
+}

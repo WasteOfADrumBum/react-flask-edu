@@ -4,20 +4,20 @@ import '../assets/styles/App.scss'
 
 function App() {
 	const icons = [
-		'fa-brands fa-react',
-		'fa-brands fa-bootstrap',
+		'fa-brands fa-react react-blue',
+		'fa-brands fa-bootstrap bootstrap-blue',
 		'fas fa-american-sign-language-interpreting',
-		'fab fa-python',
-		'fab fa-node',
+		'fab fa-python python-yellow',
+		'fab fa-node node-green',
 	]
 	const title = 'React & Flask'
 	const subTitle = 'From Zero	to Full - Stack'
 	const content =
-		'This is a simple guide to building a full-stack web application using React and Flask. The guide is broken down into 5 parts: setting up the development environment, setting up the folder directory structure, building the backend, building the frontend, and deploying the application.'
+		'Guide to building a Flask and React full-stack web app in 5 sections: dev environment setup, folder structure creation, backend/frontend building, and app deployment. Includes educational resource sharing platform with CRUD functionality, React frontend with forms and modals, Flask backend with PostgreSQL database, authentication/authorization, search, and deployment instructions.'
 
 	return (
 		<div className='App'>
-			<Hero icons={icons} title={title} subTitle={subTitle} content={content} />;
+			<Hero icons={icons} title={title} subTitle={subTitle} content={content} imageName='profile_pic.png' />;
 			<section>
 				<div className='row'>
 					<div className='col-md-12'>
@@ -289,11 +289,11 @@ function App() {
 									</div>
 									<div>
 										<span className='fw-lighter text-secondary me-3'>#05</span>
-										<span className='code-decorator'>@app</span>.route(<span className='code-string'>'/members'</span>)
+										<span className='code-decorator'>@app</span>.route(<span className='code-string'>'/users'</span>)
 									</div>
 									<div>
 										<span className='fw-lighter text-secondary me-3'>#06</span>
-										<span className='code-keyword'>def</span> get_members():
+										<span className='code-keyword'>def</span> get_users():
 									</div>
 									<div>
 										<span className='fw-lighter text-secondary me-3'>#07</span>
@@ -303,7 +303,7 @@ function App() {
 										<span className='fw-lighter text-secondary me-3'>#08</span>
 										<span className='code-string'>
 											<Tab count={1} />
-											'members'
+											'users'
 										</span>
 										: [
 									</div>
@@ -494,11 +494,11 @@ function App() {
 							</li>
 							<li className='mb-1'>
 								<span className='fw-bold'>Line 5</span> - Use the <code>@app.route()</code> decorator to define a route
-								for the <code>/members</code> endpoint.
+								for the <code>/users</code> endpoint.
 							</li>
 							<li className='mb-1'>
-								<span className='fw-bold'>Line 6</span> - Define the <code>get_members()</code> function that returns a
-								list of members.
+								<span className='fw-bold'>Line 6</span> - Define the <code>get_users()</code> function that returns a
+								list of users.
 							</li>
 							<li className='mb-1'>
 								<span className='fw-bold'>Line 29</span> - Run the application in debug mode if the script is executed
@@ -516,7 +516,7 @@ function App() {
 							icon='fa-brands fa-react'
 							title='Building The Frontend Using React'
 							subtitle='Creating a Frontend with React and a Backend with Flask
-							In this example, a frontend is built using React, which retrieves data from the backend built using Flask. The React frontend imports various components and modules, including the BrowserRouter, Routes, and Route components from the react-router-dom module. The Members component is defined to retrieve member data from the Flask backend API, and the useState and useEffect hooks are used to manage the component state. The Flask backend is built using the Flask module, with the server.py script defining the route for the /members endpoint and the get_members() function that returns a list of members. Together, the React frontend and Flask backend create a functional web application that retrieves and displays member data.'
+							In this example, a frontend is built using React, which retrieves data from the backend built using Flask. The React frontend imports various components and modules, including the BrowserRouter, Routes, and Route components from the react-router-dom module. The Users component is defined to retrieve member data from the Flask backend API, and the useState and useEffect hooks are used to manage the component state. The Flask backend is built using the Flask module, with the server.py script defining the route for the /users endpoint and the get_users() function that returns a list of users. Together, the React frontend and Flask backend create a functional web application that retrieves and displays member data.'
 						/>
 					</div>
 				</div>
@@ -551,7 +551,7 @@ function App() {
 									</div>
 									<div>
 										<span className='fw-lighter text-secondary me-3'>#06</span>
-										<span className='code-keyword'>import</span> {'{'} Members {'}'}{' '}
+										<span className='code-keyword'>import</span> {'{'} Users {'}'}{' '}
 										<span className='code-keyword'>from</span>{' '}
 										<span className='code-string'>'./components/routes'</span>
 									</div>
@@ -588,8 +588,8 @@ function App() {
 									<div>
 										<span className='fw-lighter text-secondary me-3'>#13</span>
 										<Tab count={4} />
-										&lt;Route path=<span className='code-string'>'/members'</span> element=&lt;
-										<span className='code-string'>'&lt;Members /&gt;'</span> /&gt;
+										&lt;Route path=<span className='code-string'>'/users'</span> element=&lt;
+										<span className='code-string'>'&lt;Users /&gt;'</span> /&gt;
 									</div>
 									<div>
 										<span className='fw-lighter text-secondary me-3'>#14</span>
@@ -629,7 +629,7 @@ function App() {
 								and <code>Route</code> components from the react-router-dom module.
 							</li>
 							<li className='mb-1'>
-								<span className='fw-bold'>Line 6</span> - Import the <code>Members</code> component.
+								<span className='fw-bold'>Line 6</span> - Import the <code>Users</code> component.
 							</li>
 							<li className='mb-1'>
 								<span className='fw-bold'>Line 7</span> - Create a root for the React application.
@@ -652,7 +652,7 @@ function App() {
 								<span className='fw-bold'>Line 12</span> - Define the route for the <code>/</code> endpoint.
 							</li>
 							<li className='mb-1'>
-								<span className='fw-bold'>Line 13</span> - Define the route for the <code>/members</code> endpoint.
+								<span className='fw-bold'>Line 13</span> - Define the route for the <code>/users</code> endpoint.
 							</li>
 						</ul>
 					</div>
@@ -664,7 +664,7 @@ function App() {
 								<code>
 									<div>
 										<span className='fw-lighter text-secondary me-3'>#01</span>
-										<span className='code-comment'>// Members.jsx</span>
+										<span className='code-comment'>// Users.jsx</span>
 									</div>
 									<div>
 										<span className='fw-lighter text-secondary me-3'>#02</span>
@@ -678,11 +678,11 @@ function App() {
 									</div>
 									<div>
 										<span className='fw-lighter text-secondary me-3'>#04</span>
-										<span className='code-keyword'>import</span> <span className='code-string'>'./_members.scss'</span>
+										<span className='code-keyword'>import</span> <span className='code-string'>'./_users.scss'</span>
 									</div>
 									<div>
 										<span className='fw-lighter text-secondary me-3'>#05</span>
-										<span className='code-keyword'>const</span> Members = () =&gt; {'{'}
+										<span className='code-keyword'>const</span> Users = () =&gt; {'{'}
 									</div>
 									<div>
 										<span className='fw-lighter text-secondary me-3'>#06</span>
@@ -763,7 +763,7 @@ function App() {
 									<div>
 										<span className='fw-lighter text-secondary me-3'>#21</span>
 										<Tab count={4} />
-										data.members
+										data.users
 									</div>
 									<div>
 										<span className='fw-lighter text-secondary me-3'>#22</span>
@@ -772,7 +772,7 @@ function App() {
 									<div>
 										<span className='fw-lighter text-secondary me-3'>#23</span>
 										<Tab count={3} />
-										console.log(data.members)
+										console.log(data.users)
 									</div>
 									<div>
 										<span className='fw-lighter text-secondary me-3'>#24</span>
@@ -798,7 +798,7 @@ function App() {
 										<span className='fw-lighter text-secondary me-3'>#28</span>
 										<Tab count={2} />
 										&lt;div id=
-										<span className='code-string'>'membersView'</span>&gt;
+										<span className='code-string'>'usersView'</span>&gt;
 									</div>
 									<div>
 										<span className='fw-lighter text-secondary me-3'>#29</span>
@@ -887,7 +887,7 @@ function App() {
 									</div>
 									<div>
 										<span className='fw-lighter text-secondary me-3'>#46</span>
-										<span className='code-keyword'>export default</span> Members
+										<span className='code-keyword'>export default</span> Users
 										<span className='code-blinking'>|</span>
 									</div>
 								</code>
@@ -905,16 +905,16 @@ function App() {
 								react-router-dom module.
 							</li>
 							<li className='mb-1'>
-								<span className='fw-bold'>Line 4</span> - Import the <code>_members.scss</code> stylesheet.
+								<span className='fw-bold'>Line 4</span> - Import the <code>_users.scss</code> stylesheet.
 							</li>
 							<li className='mb-1'>
-								<span className='fw-bold'>Line 5</span> - Define the <code>Members</code> component.
+								<span className='fw-bold'>Line 5</span> - Define the <code>Users</code> component.
 							</li>
 							<li className='mb-1'>
 								<span className='fw-bold'>Line 6</span> - Define the <code>data</code> state variable.
 							</li>
 							<li className='mb-1'>
-								<span className='fw-bold'>Line 17</span> - Fetch the members data from the API.
+								<span className='fw-bold'>Line 17</span> - Fetch the users data from the API.
 							</li>
 							<li className='mb-1'>
 								<span className='fw-bold'>Line 18</span> - Convert the response to JSON.
@@ -923,10 +923,10 @@ function App() {
 								<span className='fw-bold'>Line 19</span> - Set the <code>data</code> state variable.
 							</li>
 							<li className='mb-1'>
-								<span className='fw-bold'>Line 23</span> - Log the members data to the console.
+								<span className='fw-bold'>Line 23</span> - Log the users data to the console.
 							</li>
 							<li className='mb-1'>
-								<span className='fw-bold'>Line 27</span> - Render the <code>Members</code> component.
+								<span className='fw-bold'>Line 27</span> - Render the <code>Users</code> component.
 							</li>
 							<li className='mb-1'>
 								<span className='fw-bold'>Line 30</span> - Check if the <code>data</code> state variable is{' '}
@@ -937,7 +937,7 @@ function App() {
 								variable is <code>undefined</code>.
 							</li>
 							<li className='mb-1'>
-								<span className='fw-bold'>Line 33</span> - Display the members data if the <code>data</code> state
+								<span className='fw-bold'>Line 33</span> - Display the users data if the <code>data</code> state
 								variable is not <code>undefined</code>.
 							</li>
 						</ul>

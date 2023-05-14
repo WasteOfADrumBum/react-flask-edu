@@ -3,13 +3,13 @@ from flask import Flask
 # Init app
 app = Flask(__name__)
 
-# Members API Route
+# Users API Route
 
 
-@app.route('/api/members')
-def get_members():
+@app.route('/api/users')
+def get_users():
     return {
-        'members': [
+        'users': [
             {
                 'id': 1,
                 'full_name': 'John M Doe',

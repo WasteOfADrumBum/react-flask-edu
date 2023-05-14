@@ -1,5 +1,6 @@
 export { default as Hero } from './hero'
 export { default as Tab } from './tab'
-export { default as SectionHeader } from './header'
+export { default as SectionHeader } from './sectionHeader'
 export { default as DeleteUserButton } from './deleteUserButton'
 export { default as AddUserButton } from './addUserButton'
+export { default as EditUserButton } from './editUserButton'

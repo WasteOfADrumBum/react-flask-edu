@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { SectionHeader, DeleteUserButton, AddUserButton } from '../../common'
-import './_members.scss'
+import { SectionHeader, DeleteUserButton, AddUserButton, EditUserButton } from '../../common'
+import './_users.scss'
 
-const Members = () => {
+const Users = () => {
+	const [refresh, setRefresh] = useState(false)
 	const [users, setUsers] = useState([
 		{
 			id: 0,
@@ -15,7 +16,12 @@ const Members = () => {
 			status: '',
 		},
 	])
-	const [refresh, setRefresh] = useState(false)
+
+	type Props = {
+		handleStatusChange: () => void
+		onUserAdded: () => void
+		onRefresh: () => void
+	}
 
 	useEffect(() => {
 		fetch('/api/users')
@@ -40,7 +46,11 @@ const Members = () => {
 				subtitle='RESTful APIs are a way to structure communication between client and server through HTTP requests. The structure is based on a set of HTTP methods that can be used to perform specific actions on a server resource. In this case, React is the client-side framework and Flask is used as the server-side framework with Python as the backend programming language. Postgres is used as the database management system.'
 			/>
 			<div className='d-flex justify-content-end mb-3'>
-				<AddUserButton onUserAdded={handleAction('user added')} onRefresh={handleAction('refresh')} />;
+				<AddUserButton
+					handleStatusChange={handleAction('status change')}
+					onUserAdded={handleAction('user added')}
+					onRefresh={handleAction('refresh')}
+				/>
 			</div>
 			<table className='table table-striped table-hover'>
 				<thead className='table-dark'>
@@ -92,12 +102,14 @@ const Members = () => {
 								)}
 							</td>
 							<td className='text-start text-lg-end'>
-								<Link to={`/members/${user.id}`} className='btn btn-primary mx-1'>
+								<Link to={`/users/${user.id}`} className='btn btn-primary mx-1'>
 									<i className='fas fa-eye'></i>
 								</Link>
-								<Link to={`/members/${user.id}/edit`} className='btn btn-warning mx-1'>
-									<i className='fas fa-edit'></i>
-								</Link>
+								<EditUserButton
+									user={user}
+									onUserUpdated={handleAction('user edited')}
+									onRefresh={handleAction('refresh')}
+								/>
 								<DeleteUserButton
 									userId={user.id}
 									onDelete={handleAction('user deleted')}
@@ -112,4 +124,4 @@ const Members = () => {
 	)
 }
 
-export default Members
+export default Users
