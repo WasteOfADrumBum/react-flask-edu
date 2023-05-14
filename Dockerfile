@@ -1,7 +1,7 @@
 # Dockerfile
 
 # Base image
-FROM python:3.9-slim-buster
+FROM python:latest
 
 # Working directory
 WORKDIR /app
