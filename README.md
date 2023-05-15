@@ -33,22 +33,22 @@ React Meets Flask
    ```
 2. Install NPM packages
    ```sh
-   npm install
+   root/client> npm install
    ```
 3. Install Python packages
    ```sh
-   pip install -r requirements.txt
+   root/server> pip install -r requirements.txt
    ```
 
 ### Usage
 
 1. Start the Flask server
    ```sh
-   python server.py
+   root/server> python server.py
    ```
 2. Start the React server
    ```sh
-   npm start
+   root/client> npm start
    ```
 3. Navigate to http://localhost:3000/
 
