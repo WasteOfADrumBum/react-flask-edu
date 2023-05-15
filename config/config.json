@@ -1,0 +1,24 @@
+{
+	"development": {
+		"username": "aartpgcw",
+		"password": "oaFoLmySbiO-_Bk5QK61dvglA_l8FPBy",
+		"database": "aartpgcw",
+		"host": "drona.db.elephantsql.com",
+		"dialect": "postgres"
+	},
+	"test": {
+		"username": "aartpgcw",
+		"password": "oaFoLmySbiO-_Bk5QK61dvglA_l8FPBy",
+		"database": "aartpgcw",
+		"host": "drona.db.elephantsql.com",
+		"dialect": "postgres"
+	},
+	"production": {
+		"username": "aartpgcw",
+		"password": "oaFoLmySbiO-_Bk5QK61dvglA_l8FPBy",
+		"database": "aartpgcw",
+		"host": "drona.db.elephantsql.com",
+		"dialect": "postgres"
+	}
+}
+
