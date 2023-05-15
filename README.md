@@ -19,6 +19,7 @@ React Meets Flask
   - [Technologies Used](#technologies-used-1)
   - [Contributing](#contributing-1)
   - [License](#license-1)
+  - [Demo](#demo)
 
 ## About the Project
 
@@ -76,4 +77,18 @@ Contributions are welcome!
 ### License
 
 Distributed under the MIT License. See `LICENSE` for more information.
+
+### Demo
+
+#### Home
+
+![Alt Text](./client/src/assets/images/App%20-%20Home.png)
+
+#### Postgres
+
+![Alt Text](./client/src/assets/images/App%20-%20Postgres.png)
+
+#### Users
+
+![Alt Text](./client/src/assets/images/App%20-%20Users.png)
 
